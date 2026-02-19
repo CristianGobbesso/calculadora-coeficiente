@@ -1,5 +1,6 @@
 import  { useState } from 'react'
 import { calculateCoefficient } from '../utils/calculateCoefficient';
+import "./Calculator.css";
 
 export default function Calculator(){
     const [percentage, setPercentage]= useState("");
@@ -7,9 +8,12 @@ export default function Calculator(){
     const [error, setError]=useState("")
 
     const handleCalculate = ()=>{
-        const value = calculateCoefficient(percentage)
+        const normalized = percentage
+        .trim()
+        .replace(",", ".");
+        const value = calculateCoefficient(normalized)
        if(value === null){
-        setError("Ingrese solo el numero del Derecho de exportacion");
+        setError("Ingrese un Derecho de exportacion valido");
         setResult(null)
        }
        else{
@@ -18,23 +22,38 @@ export default function Calculator(){
        };
     }
     return (
-        <div>
-            <h1>Calculadora de Coeficiente de Exportacion</h1>
-            <input type="number"
-            placeholder='Ingrese el derecho de exportacion'
-            value={percentage}
-            onChange={(e)=>{setPercentage(e.target.value);
-                setError("");
-            }} />
+  <div className="calculator">
+    <h1 className="calculator__title">
+      Calculadora de
+  <span> Coeficiente de Exportación</span>
+    </h1>
 
-            <button onClick={handleCalculate}>Calcular</button>
+    <div className="calculator__form">
+      <input
+        type="number"
+        placeholder="Ingrese el derecho de Expo"
+        value={percentage}
+        onChange={(e) => {
+          setPercentage(e.target.value);
+          setError("");
+          
+        }}
+      />
 
-            {error && <p style={{ color: "red" }}>{error}</p>}
-            {result !== null && (
-                <p>Coeficiente de Exportacion: {result.toFixed(5)}</p>
-            ) }
+      <button onClick={handleCalculate}>
+        Calcular
+      </button>
+    </div>
 
-        </div>
-    );
+    {error && <p className="calculator__error">{error}</p>}
+
+    {result !== null && (
+      <p className="calculator__result">
+        Coeficiente de Exportación: {result.toFixed(5)}
+      </p>
+    )}
+  </div>
+);
+
 
 }
