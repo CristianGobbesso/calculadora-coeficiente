@@ -4,10 +4,18 @@ import { calculateCoefficient } from '../utils/calculateCoefficient';
 export default function Calculator(){
     const [percentage, setPercentage]= useState("");
     const [result, setResult]=useState(null);
+    const [error, setError]=useState("")
 
     const handleCalculate = ()=>{
         const value = calculateCoefficient(percentage)
-        setResult(value)
+       if(value === null){
+        setError("Ingrese solo el numero del Derecho de exportacion");
+        setResult(null)
+       }
+       else{
+        setError("");
+        setResult(value);
+       };
     }
     return (
         <div>
@@ -19,6 +27,7 @@ export default function Calculator(){
 
             <button onClick={handleCalculate}>Calcular</button>
 
+            {error && <p style={{ color: "red" }}>{error}</p>}
             {result !== null && (
                 <p>Coeficiente de Exportacion: {result}</p>
             ) }
