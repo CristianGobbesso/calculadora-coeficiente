@@ -31,7 +31,7 @@ export default function Calculator(){
 
             {error && <p style={{ color: "red" }}>{error}</p>}
             {result !== null && (
-                <p>Coeficiente de Exportacion: {result}</p>
+                <p>Coeficiente de Exportacion: {result.toFixed(5)}</p>
             ) }
 
         </div>
