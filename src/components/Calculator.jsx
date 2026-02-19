@@ -23,7 +23,9 @@ export default function Calculator(){
             <input type="number"
             placeholder='Ingrese el derecho de exportacion'
             value={percentage}
-            onChange={(e)=>setPercentage(e.target.value)} />
+            onChange={(e)=>{setPercentage(e.target.value);
+                setError("");
+            }} />
 
             <button onClick={handleCalculate}>Calcular</button>
 
