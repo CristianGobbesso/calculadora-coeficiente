@@ -22,38 +22,41 @@ export default function Calculator(){
        };
     }
     return (
-  <div className="calculator">
-    <h1 className="calculator__title">
-      Calculadora de
-  <span> Coeficiente de Exportación</span>
-    </h1>
+    <div className="calculator">
+      <h1 className="calculator__title">
+        Calculadora de
+        <span> Coeficiente de Exportación</span>
+      </h1>
 
-    <div className="calculator__form">
-      <input
-        type="number"
-        placeholder="Ingrese el derecho de Expo"
-        value={percentage}
-        onChange={(e) => {
-          setPercentage(e.target.value);
-          setError("");
-          
+      <form
+        className="calculator__form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleCalculate();
         }}
-      />
+      >
+        <input
+          type="text"
+          placeholder="Ingrese el derecho de Expo"
+          value={percentage}
+          onChange={(e) => {
+            setPercentage(e.target.value);
+            setError("");
+          }}
+        />
 
-      <button onClick={handleCalculate}>
-        Calcular
-      </button>
+        <button type="submit">
+          Calcular
+        </button>
+      </form>
+
+      {error && <p className="calculator__error">{error}</p>}
+
+      {result !== null && (
+        <p className="calculator__result">
+          Coeficiente de Exportación: {result}
+        </p>
+      )}
     </div>
-
-    {error && <p className="calculator__error">{error}</p>}
-
-    {result !== null && (
-      <p className="calculator__result">
-        Coeficiente de Exportación: {result.toFixed(5)}
-      </p>
-    )}
-  </div>
-);
-
-
+  );
 }
