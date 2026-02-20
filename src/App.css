@@ -6,8 +6,11 @@
 }
 
 body {
-  background-color: #f4f6f8;
+  margin: 0;
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
 }
+
 
 .app {
   min-height: 100vh;
@@ -17,10 +20,51 @@ body {
 }
 
 .container {
-  background: white;
+  background: rgb(203, 203, 203);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   width: 100%;
   max-width: 400px;
+}
+
+.header {
+  width: 100%;
+  background-color: #1e293b;
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  opacity: 0.8;
 }
