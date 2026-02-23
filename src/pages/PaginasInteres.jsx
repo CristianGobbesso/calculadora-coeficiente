@@ -4,6 +4,7 @@ import cdaImg from "../assets/cda.webp";
 import tarifarImg from "../assets/tarifar.webp";
 import ccerImg from "../assets/ccer.webp";
 import "./PaginasInteres.css";
+import LinkCard from "../components/LinkCard/LinkCard";
 
 export default function PaginasInteres() {
 
@@ -43,25 +44,21 @@ export default function PaginasInteres() {
 
     return (
         <div className="pages">
-            <h1 className="pages__title">Paginas de Interes.</h1>
+            <h1 className="pages__title">Páginas de Interés.</h1>
             <div className="pages_grid">
                 {
                     links.map((item) => (
-                        <a key={item.title}
-                            href={item.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="card"
-                        >
-                            <div className="card__image-wrapper">
-                                <img src={item.image} alt={item.title} className="card__img" />
-                            </div>
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                        </a>
+                        <LinkCard
+                            key={item.title}
+                            title={item.title}
+                            description={item.description}
+                            url={item.url}
+                            image={item.image}
+                        />
                     ))
                 }
             </div>
+            
         </div>
     )
 
