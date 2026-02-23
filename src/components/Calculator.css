@@ -1,9 +1,7 @@
 .calculator {
   width: 100%;
-  max-width: 600px;   
-  margin: 0 auto;     
+  padding: 2rem;
   background: #ffffff;
-  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
@@ -61,4 +59,14 @@
   padding: 0.8rem;
   border-radius: 8px;
   font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .calculator__form {
+    flex-direction: column;
+  }
+
+  .calculator__form button {
+    width: 100%;
+  }
 }

@@ -43,7 +43,8 @@ export default function PaginasInteres() {
 
 
     return (
-        <div className="pages">
+        <main className="pages">
+            <section className="pages__section">
             <h1 className="pages__title">Páginas de Interés.</h1>
             <div className="pages_grid">
                 {
@@ -58,8 +59,8 @@ export default function PaginasInteres() {
                     ))
                 }
             </div>
-            
-        </div>
+            </section>
+        </main>
     )
 
 }
