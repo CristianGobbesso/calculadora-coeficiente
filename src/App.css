@@ -3,6 +3,8 @@
   --text: #0f172a;
   --card: #ffffff;
   --border: #e5e7eb;
+  --muted: #64748b;
+  --primary: #2563eb;
 }
 
 body.dark {
@@ -10,6 +12,8 @@ body.dark {
   --text: #f1f5f9;
   --card: #1e293b;
   --border: #334155;
+  --muted: #94a3b8;
+  --primary: #3b82f6;
 }
 
 /* ============================= */
@@ -44,42 +48,39 @@ body {
 
 .header {
   width: 100%;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+/* Light */
+body:not(.dark) .header {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Dark */
+body.dark .header {
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom: 1px solid var(--border);
 }
 
 .header__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 18px 32px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.theme-toggle {
-  background: none;
-  border: 1px solid var(--border);
-  padding: 6px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: 0.2s ease;
-}
-
-.theme-toggle:hover {
-  background: var(--card);
 }
 
 .logo {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  color: #0f172a;
+  color: var(--text);
 }
 
 /* ============================= */
@@ -95,17 +96,41 @@ body {
 .nav__link {
   text-decoration: none;
   font-weight: 500;
-  color: #475569;
+  color: var(--muted);
   transition: 0.2s ease;
 }
 
 .nav__link:hover {
-  color: #2563eb;
+  color: var(--primary);
 }
 
 .nav__link--active {
-  color: #2563eb;
+  color: var(--primary);
   font-weight: 600;
+}
+
+/* ============================= */
+/* THEME BUTTON */
+/* ============================= */
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: var(--text);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+  background: var(--card);
+}
+
+body.dark .theme-toggle {
+  background: rgba(59, 130, 246, 0.15);
 }
 
 /* ============================= */
@@ -119,7 +144,6 @@ body {
   gap: 80px;
 }
 
-/* Calculadora centrada como producto */
 .home__container {
   width: 100%;
   max-width: 520px;
@@ -143,14 +167,14 @@ body {
 
 .home__intro p {
   font-size: 1.1rem;
-  color: #a7b2c2;
+  color: var(--muted);
   margin-bottom: 24px;
 }
 
 .home__cta {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #2563eb;
+  background-color: var(--primary);
   color: white;
   text-decoration: none;
   border-radius: 10px;
@@ -179,6 +203,6 @@ body {
 }
 
 .home__info p {
-  color: #a7b2c2;
+  color: var(--muted);
   font-size: 1rem;
 }
