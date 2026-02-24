@@ -44,11 +44,19 @@ export default function PaginasInteres() {
 
     return (
         <main className="pages">
+            <section className="pages__hero">
+                <h1 className="pages__title">
+                    Recursos Clave de Comercio Exterior
+                </h1>
+                <p className="pages__subtitle">
+                    Sitios oficiales y herramientas esenciales para profesionales
+                    del comercio internacional y despachantes de aduana.
+                </p>
+            </section>
+
             <section className="pages__section">
-            <h1 className="pages__title">Páginas de Interés.</h1>
-            <div className="pages_grid">
-                {
-                    links.map((item) => (
+                <div className="pages__grid">
+                    {links.map((item) => (
                         <LinkCard
                             key={item.title}
                             title={item.title}
@@ -56,11 +64,9 @@ export default function PaginasInteres() {
                             url={item.url}
                             image={item.image}
                         />
-                    ))
-                }
-            </div>
+                    ))}
+                </div>
             </section>
         </main>
-    )
-
+    );
 }
