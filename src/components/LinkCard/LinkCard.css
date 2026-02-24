@@ -63,3 +63,27 @@
   line-height: 1.5;
   flex-grow: 1;
 }
+
+/* ============================= */
+/* CARDS - MODO CLARO */
+/* ============================= */
+
+body:not(.dark) .link-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body:not(.dark) .link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: #cbd5e1;
+}
+
+body:not(.dark) .link-card__image-wrapper {
+  background: #f1f5f9;
+}
+
+body:not(.dark) .link-card__description {
+  color: #475569;
+}
