@@ -1,5 +1,6 @@
 .link-card {
-  background: white;
+  background: var(--card);
+border: 1px solid var(--border);
   border-radius: 20px;
   padding: 22px;
   text-decoration: none;

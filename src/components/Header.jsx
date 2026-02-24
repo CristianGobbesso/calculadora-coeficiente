@@ -1,6 +1,20 @@
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [darkMode, setDarkMode] = useState(() => {
+  const savedTheme = localStorage.getItem("theme");
+  return savedTheme === "dark";
+});
+useEffect(() => {
+  if (darkMode) {
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }
+}, [darkMode]);
   return (
     <header className="header">
       <div className="header__container">
@@ -29,7 +43,14 @@ export default function Header() {
               </NavLink>
             </li>
           </ul>
+          
         </nav>
+        <button
+  className="theme-toggle"
+  onClick={() => setDarkMode(prev => !prev)}
+>
+  {darkMode ? "☀️" : "🌙"}
+</button>
       </div>
     </header>
   );
