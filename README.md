@@ -2,20 +2,51 @@
 
 Aplicación web desarrollada con React que permite calcular el coeficiente de exportación a partir del derecho de exportación ingresado por el usuario.
 
-## Funcionalidades
+El proyecto incluye una sección de recursos oficiales del sector y un diseño moderno con soporte para modo claro y oscuro.
 
-- Cálculo dinámico del coeficiente
-- Validación de entrada
+---
+
+## 🌐 Demo online
+
+Podés probar la aplicación aquí:
+
+👉 https://calculadora-coeficiente-exportacion.netlify.app/
+
+---
+
+## 🚀 Funcionalidades
+
+- Cálculo dinámico del coeficiente de exportación
+- Validación de entrada y manejo de errores
+- Persistencia de datos en localStorage
+- Modo claro / oscuro con guardado de preferencia
 - Diseño responsive
 - Sección de enlaces a páginas oficiales de comercio exterior
+- Microinteracciones y efectos visuales modernos
 
-## Tecnologías
+---
+
+## 🛠 Tecnologías utilizadas
 
 - React
 - React Router
-- CSS3
 - Vite
+- CSS3 (con variables y diseño adaptativo)
+- JavaScript ES6+
 
-## Objetivo
+---
 
-Facilitar el cálculo rápido del coeficiente de exportación y centralizar enlaces útiles del sector.
+## 🎯 Objetivo del proyecto
+
+Facilitar el cálculo rápido del coeficiente de exportación y centralizar enlaces útiles del sector en una interfaz moderna y accesible.
+
+---
+
+## 📦 Instalación
+
+```bash
+git clone https://github.com/CristianGobbesso/calculadora-coeficiente.git
+cd calculadora-coeficiente
+npm install
+npm run dev
+```
