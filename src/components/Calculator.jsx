@@ -1,27 +1,47 @@
-import  { useState } from 'react'
-import { calculateCoefficient } from '../utils/calculateCoefficient';
+import { useState, useEffect } from "react";
+import { calculateCoefficient } from "../utils/calculateCoefficient";
 import "./Calculator.css";
 
-export default function Calculator(){
-    const [percentage, setPercentage]= useState("");
-    const [result, setResult]=useState(null);
-    const [error, setError]=useState("")
+export default function Calculator() {
 
-    const handleCalculate = ()=>{
-        const normalized = percentage
-        .trim()
-        .replace(",", ".");
-        const value = calculateCoefficient(normalized)
-       if(value === null){
-        setError("Ingrese un Derecho de exportacion valido");
-        setResult(null)
-       }
-       else{
-        setError("");
-        setResult(value);
-       };
+  const [percentage, setPercentage] = useState(() => {
+    return localStorage.getItem("percentage") || "";
+  });
+
+  const [result, setResult] = useState(() => {
+    const saved = localStorage.getItem("result");
+    return saved ? Number(saved) : null;
+  });
+
+  const [error, setError] = useState("");
+
+  // Guardar percentage
+  useEffect(() => {
+    localStorage.setItem("percentage", percentage);
+  }, [percentage]);
+
+  // Guardar result
+  useEffect(() => {
+    if (result !== null) {
+      localStorage.setItem("result", result);
     }
-    return (
+  }, [result]);
+
+  const handleCalculate = () => {
+    const normalized = percentage.trim().replace(",", ".");
+    const value = calculateCoefficient(normalized);
+
+    if (value === null) {
+      setError("Ingrese un Derecho de exportación válido");
+      setResult(null);
+      return;
+    }
+
+    setError("");
+    setResult(value);
+  };
+
+  return (
     <div className="calculator">
       <h1 className="calculator__title">
         Calculadora de
@@ -45,9 +65,7 @@ export default function Calculator(){
           }}
         />
 
-        <button type="submit">
-          Calcular
-        </button>
+        <button type="submit">Calcular</button>
       </form>
 
       {error && <p className="calculator__error">{error}</p>}
