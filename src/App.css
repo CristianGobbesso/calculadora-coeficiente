@@ -72,10 +72,26 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
 }
 
-.nav__link:hover {
-  opacity: 0.8;
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.nav__link--active {
+  border-bottom: 2px solid white;
 }
 
 /* ============================= */
