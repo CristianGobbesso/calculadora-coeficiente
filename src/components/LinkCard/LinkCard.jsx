@@ -5,13 +5,14 @@ const LinkCard = ({ title, description, url, image }) => {
     <a
       href={url}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer external"
+      title={`Visitar sitio oficial de ${title}`}
       className="link-card"
     >
       <div className="link-card__image-wrapper">
         <img
           src={image}
-          alt={`Ir a ${title}`}
+          alt={`Logo de ${title}`}
           className="link-card__img"
         />
       </div>
