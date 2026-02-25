@@ -55,7 +55,7 @@ export default function PaginasInteres() {
             </section>
 
             <section className="pages__section">
-                <div className="pages__context">
+                <article className="pages__context">
                     <h2>Organismos y entidades del comercio exterior argentino</h2>
                     <p>
                         El comercio exterior en Argentina está regulado por diversos organismos
@@ -68,7 +68,7 @@ export default function PaginasInteres() {
                         profesionales del comercio internacional para la gestión de operaciones
                         de exportación e importación.
                     </p>
-                </div>
+                </article>
             </section>
 
             <section className="pages__section">
