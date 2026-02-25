@@ -55,6 +55,23 @@ export default function PaginasInteres() {
             </section>
 
             <section className="pages__section">
+                <div className="pages__context">
+                    <h2>Organismos y entidades del comercio exterior argentino</h2>
+                    <p>
+                        El comercio exterior en Argentina está regulado por diversos organismos
+                        oficiales que establecen normativas tributarias, aduaneras y económicas.
+                        Además, existen entidades profesionales y herramientas especializadas
+                        que brindan información técnica y actualizaciones del sector.
+                    </p>
+                    <p>
+                        A continuación se presentan los principales recursos utilizados por
+                        profesionales del comercio internacional para la gestión de operaciones
+                        de exportación e importación.
+                    </p>
+                </div>
+            </section>
+
+            <section className="pages__section">
                 <div className="pages__grid">
                     {links.map((item) => (
                         <LinkCard

@@ -28,6 +28,65 @@
 }
 
 /* ============================= */
+/* CONTEXTO  */
+/* ============================= */
+
+.pages__section {
+  max-width: 800px;
+  margin: 0 auto 70px auto;
+}
+
+.pages__context {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.pages__context h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.pages__context p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* ============================= */
+/* CONTEXTO - MODO CLARO */
+/* ============================= */
+
+body:not(.dark) .pages__context {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body:not(.dark) .pages__context p {
+  color: #475569;
+}
+body:not(.dark) .pages__subtitle {
+  color: #475569;
+}
+
+/* ============================= */
+/* CONTEXTO - MODO OSCURO */
+/* ============================= */
+
+body.dark .pages__context {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .pages__context p {
+  color: var(--text);
+}
+
+/* ============================= */
 /* GRID */
 /* ============================= */
 
