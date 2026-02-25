@@ -6,7 +6,7 @@ export default function Home() {
     <section className="home">
 
       <div className="home__intro">
-        <h2>Herramienta rápida para Comercio Exterior</h2>
+        <h1>Herramienta rápida para Comercio Exterior</h1>
         <p>
           Calculá el coeficiente de exportación de manera simple y
           consultá enlaces oficiales relacionados al sector.
@@ -22,7 +22,7 @@ export default function Home() {
       </div>
 
       <div className="home__info">
-        <h3>¿Qué es el coeficiente de exportación?</h3>
+        <h2>¿Qué es el coeficiente de exportación?</h2>
         <p>
           Es un factor utilizado para ajustar valores en función del
           derecho de exportación aplicable.
@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
       <div className="home__info">
-        <h3>¿Cómo se calcula el coeficiente de exportación?</h3>
+        <h2>¿Cómo se calcula el coeficiente de exportación?</h2>
         <p>
           La fórmula utilizada es:
         </p>
@@ -43,7 +43,7 @@ export default function Home() {
       </div>
 
       <div className="home__info">
-        <h3>Ejemplo práctico</h3>
+        <h2>Ejemplo práctico</h2>
         <p>
           Si el derecho de exportación es del 12%, el cálculo sería:
         </p>
@@ -56,7 +56,7 @@ export default function Home() {
       </div>
 
       <div className="home__info">
-        <h3>¿Para qué sirve el coeficiente de exportación?</h3>
+        <h2>¿Para qué sirve el coeficiente de exportación?</h2>
         <p>
           Este coeficiente permite ajustar precios, valores FOB y operaciones
           comerciales considerando las retenciones vigentes. Es utilizado por
@@ -65,7 +65,7 @@ export default function Home() {
 
       </div>
       <div className="home__info">
-        <h3>Marco normativo en Argentina</h3>
+        <h2>Marco normativo en Argentina</h2>
         <p>
           Los derechos de exportación en Argentina son establecidos por el
           Poder Ejecutivo, con base en el Código Aduanero (Ley 22.415), que gravan la salida de mercaderías y servicios.

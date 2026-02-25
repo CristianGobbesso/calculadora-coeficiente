@@ -43,10 +43,10 @@ export default function Calculator() {
 
   return (
     <div className="calculator">
-      <h1 className="calculator__title">
+      <h2 className="calculator__title">
         Calculadora de
         <span> Coeficiente de Exportación</span>
-      </h1>
+      </h2>
 
       <form
         className="calculator__form"
