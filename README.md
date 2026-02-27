@@ -10,7 +10,7 @@ El proyecto incluye una sección de recursos oficiales del sector y un diseño m
 
 Podés probar la aplicación aquí:
 
-👉 https://calculadora-coeficiente-exportacion.netlify.app/
+👉 https://coeficientedeexportacion.netlify.app/
 
 ---
 
