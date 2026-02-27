@@ -4,12 +4,13 @@ import Home from "./pages/Home";
 import PaginasInteres from "./pages/PaginasInteres";
 import Header from "./components/Header";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/Scrool/ScrollToTop";
 
 function App() {
   return (
     <>
       <Header />
-
+       <ScrollToTop />
       <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />

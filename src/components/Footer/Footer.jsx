@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import ScrollLink from "../Scrool/ScrollLink";
 
 export default function Footer() {
     return (
@@ -17,8 +18,8 @@ export default function Footer() {
                 <div className="footer__links">
                     <h4>Secciones</h4>
                     <ul>
-                        <li><Link to="/">Inicio</Link></li>
-                        <li><Link to="/paginas">Páginas de interés</Link></li>
+                        <li><ScrollLink to="/">Inicio</ScrollLink></li>
+                        <li><ScrollLink to="/paginas">Páginas de interés</ScrollLink></li>
                     </ul>
                 </div>
 
