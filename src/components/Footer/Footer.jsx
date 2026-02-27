@@ -16,8 +16,8 @@ export default function Footer() {
                 <div className="footer__links">
                     <h4>Secciones</h4>
                     <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/paginas">Páginas de interés</a></li>
+                        <li><Link to="/">Inicio</Link></li>
+                        <li><Link to="/paginas">Páginas de interés</Link></li>
                     </ul>
                 </div>
 
